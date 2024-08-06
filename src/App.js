@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CustomSelect from "./Components/CustomSelectApp/CustomSelect.jsx";
 
-function App() {
+const options = [
+  {
+    label: "Smartphone",
+    options: [
+      { label: "iPhone" },
+      { label: "Samsung" },
+      { label: "Google" },
+      { label: "OnePlus" },
+      { label: "Xiaomi" },
+      { label: "Oppo" },
+      { label: "Sony" },
+      { label: "Nokia" },
+      { label: "Asus" },
+      { label: "Realme" },
+    ],
+  },
+  {
+    label: "Tws Buds",
+    options: [
+      { label: "AirPods" },
+      { label: "SamsungBuds" },
+      { label: "SonyXM4" },
+      { label: "JabraElite" },
+      { label: "AnkerAir" },
+      { label: "PixelBuds" },
+      { label: "Powerbeats" },
+      { label: "JBL" },
+    ],
+  },
+];
+
+const App = () => {
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  const handleChange = (value) => {
+    setSelectedValue(value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CustomSelect
+        isClearable={true}
+        isSearchable={true}
+        isDisabled={false}
+        options={options}
+        value={selectedValue}
+        placeholder="Select your favorite choice"
+        isGrouped={true}
+        isMulti={true}
+        onChangeHandler={handleChange}
+        onMenuOpen={() => console.log("Menu opened")}
+        onSearchHandler={(search) => console.log("Search :", search)}
+      />
     </div>
   );
-}
+};
 
 export default App;

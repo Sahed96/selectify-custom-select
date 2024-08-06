@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif !important;
+}
+
+.kzui-select {
+  position: relative;
+  width: 350px;
+  height: 384px;
+  font-size: 14px;
+  place-items: center;
+  top: 100px;
+  margin: 0 auto;
+  background: #b7f0cd;
+
+  border-radius: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 30px;
+}
+
+.kzui-select__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #25606f;
+  padding: 8px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.kzui-select__control.kzui-select--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.kzui-select__value {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  color: #666;
+  padding: 8px;
+  align-items: center;
+  gap: 4px;
+}
+
+.kzui-select__items {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #666;
+  padding: 6px;
+  align-items: center;
+  gap: 4px;
+}
+
+.kzui-select__placeholder {
+  color: #999;
+}
+
+.kzui-select__clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.kzui-select__menu {
+  position: absolute;
+
+  width: 100%;
+
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.kzui-select__search {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  margin: 2px;
+  border-bottom: 2px solid #111416;
+}
+
+.kzui-select__options {
+  padding: 8px;
+}
+
+.kzui-select__option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.kzui-select__option--selected {
+  background: #eee;
+}
+
+.kzui-select__group {
+  margin-bottom: 8px;
+}
+
+.kzui-select__group-label {
+  font-weight: bold;
+  padding: 8px;
+}
